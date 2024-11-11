@@ -1,0 +1,36 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Floating number style */
+.number {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none; /* Allow clicks to pass through */
+  animation: floatUp 1s ease-out forwards;
+}
+
+/* Animation effect */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
